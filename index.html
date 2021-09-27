@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<title>Reveal Effect</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+
+
+</head>
+
+<body>
+	<div class='col'>
+		<h1>Move your cursor around!</h1>
+		
+		<div class ='row container'>
+			<div class= 'row'>
+				<label for="colorPicker">Color Picker: </label> 
+				&nbsp;
+				<input type="color" id="colorPicker" value="#000066">
+			</div>
+			<div class='button' id='resetColorBtn'>
+			Add Fill Color
+			</div>
+		</div>
+
+		<div class='container row'>
+			<label for="globalComp">Global composite operation:</label>
+			<select name="globalComp" id="globalComp">
+				
+				<option value="source-in">source-in</option>
+				<option value="source-out">source-out</option>
+				<option value="source-atop">source-atop</option>
+				<option value="destination-out" selected>destination-out</option>
+				<option value="destination-over">destination-over</option>
+				<option value="destination-in">destination-in</option>
+				<option value="destination-atop">destination-atop</option>
+				<option value="lighter">lighter</option>
+				<option value="copy">copy</option>
+				<option value="xor">xor</option>
+				<option value="multiply">multiply</option>
+				<option value="screen">screen</option>
+				<option value="overlay">overlay</option>
+				<option value="darken">darken</option>
+				<option value="lighten">lighten</option>
+				<option value="color-dodge">color-dodge</option>
+				<option value="color-burn">color-burn</option>
+				<option value="hard-light">hard-light</option>
+				<option value="soft-light">soft-light</option>
+				<option value="difference">difference</option>
+				<option value="exclusion">exclusion</option>
+				<option value="hue">hue</option>
+				<option value="saturation">saturation</option>
+				<option value="color">color</option>
+				<option value="luminosity">luminosity</option>
+			</select>
+		</div>
+
+		<div class='container row'>
+			<label>Cursor shape:</label>
+			<div>
+				<input type="radio" id="circleCursor" name="cursorShape" value="circle">
+				<label for="circleCursor">Circle</label>
+			
+				<input type="radio" id="rectCursor" name="cursorShape" checked="true" value="rectangle">
+				<label for="css">Rectangle</label>
+			</div>
+		</div>
+
+		<div class='container row'>
+			<label>Cursor Size:</label>
+			<input type="number" id="cursorSize" name="cursorSize" min="1" max="500" value=100>
+		</div>
+		<br/>
+		<div class='button' id='resetSprinklesBtn'>
+			Reset Image
+		</div>
+		
+	</div>
+	<div class='col'>
+		<div id='stage'>
+			<canvas id='myCanvas'></canvas>
+			<img id='mainImg' src="pablo.jpg" alt="Pablito">
+			<!-- <img id='coverImg' src="confetti-sprinkles.jpg" alt="confetti"> -->
+		</div>
+	</div>
+
+</body>
+
+</html>
